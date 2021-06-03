@@ -8,15 +8,32 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Hexo+Next简单设置教程 | Ciallo～(∠・ω&lt; )⌒★</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="流程123456789101112131415161718192021222324252627282930313233343536373839node -v #查看node版本npm -v #查看npm版本npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org	#安装淘宝的cnpm 管理器cnpm -v	#查看cnpm版本cnpm">
+  <!--顶部加载条Start-->
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+    <style>
+    .pace .pace-progress {
+        background: #6d6d6d; /*进度条颜色*/
+        height: 2px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #6d6d6d; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #6d6d6d;    /*上边框颜色*/
+        border-left-color: #6d6d6d;    /*左边框颜色*/
+    }
+  </style>
+  <!--顶部加载条End-->
+  <meta name="description" content="介绍如何快速搭建一个简单的个人博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Next简单设置教程">
 <meta property="og:url" content="http://example.com/2021/05/28/Hexo+Next%E8%AE%BE%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒★">
-<meta property="og:description" content="流程123456789101112131415161718192021222324252627282930313233343536373839node -v #查看node版本npm -v #查看npm版本npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org	#安装淘宝的cnpm 管理器cnpm -v	#查看cnpm版本cnpm">
+<meta property="og:description" content="介绍如何快速搭建一个简单的个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-28T07:32:12.000Z">
-<meta property="article:modified_time" content="2021-05-28T07:41:52.775Z">
+<meta property="article:modified_time" content="2021-06-03T06:11:20.391Z">
 <meta property="article:author" content="杨霖">
 <meta property="article:tag" content="转载">
 <meta property="article:tag" content="技术">
@@ -91,22 +108,26 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yanglinya" title="github"><i class="icon-github"></i></a>
 		        
+					<a class="mail" target="_blank" href="/2511452948@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
 </div>
-<nav class="header-nav">
+<!-- <nav class="header-nav">
     <div class="social">
         
             <a class="github" target="_blank" href="https://github.com/yanglinya" title="github"><i class="icon-github"></i></a>
         
-    </div>
+            <a class="mail" target="_blank" href="/2511452948@qq.com" title="mail"><i class="icon-mail"></i></a>
+        
+    </div> -->
 
     <!--音乐播放插件-->
-    <div style="margin-top:150px;">
+    <!-- <div style="margin-top:150px;">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=100 src="//music.163.com/outchain/player?type=2&id=536870202&auto=1&height=66"></iframe>
     </div>
-</nav>
+</nav> -->
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -139,6 +160,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/yanglinya" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="mail" target="_blank" href="/2511452948@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -186,7 +209,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">node -v #查看node版本</span><br><span class="line">npm -v #查看npm版本</span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	#安装淘宝的cnpm 管理器</span><br><span class="line">cnpm -v	#查看cnpm版本</span><br><span class="line">cnpm install -g hexo-cli    #安装hexo框架</span><br><span class="line">hexo -v	#查看hexo版本</span><br><span class="line">mkdir blog	#创建blog目录</span><br><span class="line">cd blog	 #进入blog目录</span><br><span class="line">sudo hexo init 	#生成博客 初始化博客</span><br><span class="line">hexo s	#启动本地博客服务</span><br><span class="line">http://localhost:4000/	#本地访问地址</span><br><span class="line">hexo n 我的第一篇文章 #创建新的文章 </span><br><span class="line">#返回blog目录</span><br><span class="line">hexo clean #清理</span><br><span class="line">hexo g #生成</span><br><span class="line">#Github创建一个新的仓库 YourGithubName.github.io</span><br><span class="line">cnpm install --save hexo-deployer-git #在blog目录下安装git部署插件</span><br><span class="line">----</span><br><span class="line">#配置_config.yml </span><br><span class="line">-----</span><br><span class="line">	# Deployment</span><br><span class="line">	## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">	deploy:</span><br><span class="line">  		type: git</span><br><span class="line"> 		repo: https://github.com/YourGithubName/YourGithubName.github.io.git</span><br><span class="line">  		branch: master</span><br><span class="line">-----</span><br><span class="line">hexo d	#部署到Github仓库里</span><br><span class="line">https://YourGithubName.github.io/  #访问这个地址可以查看博客</span><br><span class="line"></span><br><span class="line"> git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia  #下载yilia主题到本地</span><br><span class="line"></span><br><span class="line">#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</span><br><span class="line"></span><br><span class="line">hexo c	#清理一下</span><br><span class="line">hexo g	#生成</span><br><span class="line">hexo d	#部署到远程Github仓库</span><br><span class="line">https://YourGithubName.github.io/  #查看博客</span><br><span class="line">转载至b站用户@我是小州啊 的学习笔记</span><br></pre></td></tr></table></figure>
+        <h1 id="介绍如何快速搭建一个简单的个人博客"><a href="#介绍如何快速搭建一个简单的个人博客" class="headerlink" title="介绍如何快速搭建一个简单的个人博客"></a>介绍如何快速搭建一个简单的个人博客</h1><span id="more"></span>
+
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">node -v #查看node版本</span><br><span class="line">npm -v #查看npm版本</span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	#安装淘宝的cnpm 管理器</span><br><span class="line">cnpm -v	#查看cnpm版本</span><br><span class="line">cnpm install -g hexo-cli    #安装hexo框架</span><br><span class="line">hexo -v	#查看hexo版本</span><br><span class="line">mkdir blog	#创建blog目录</span><br><span class="line">cd blog	 #进入blog目录</span><br><span class="line">sudo hexo init 	#生成博客 初始化博客</span><br><span class="line">hexo s	#启动本地博客服务</span><br><span class="line">http://localhost:4000/	#本地访问地址</span><br><span class="line">hexo n 我的第一篇文章 #创建新的文章 </span><br><span class="line">#返回blog目录</span><br><span class="line">hexo clean #清理</span><br><span class="line">hexo g #生成</span><br><span class="line">#Github创建一个新的仓库 YourGithubName.github.io</span><br><span class="line">cnpm install --save hexo-deployer-git #在blog目录下安装git部署插件</span><br><span class="line">----</span><br><span class="line">#配置_config.yml </span><br><span class="line">-----</span><br><span class="line">	# Deployment</span><br><span class="line">	## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">	deploy:</span><br><span class="line">  		type: git</span><br><span class="line"> 		repo: https://github.com/YourGithubName/YourGithubName.github.io.git</span><br><span class="line">  		branch: master</span><br><span class="line">-----</span><br><span class="line">hexo d	#部署到Github仓库里</span><br><span class="line">https://YourGithubName.github.io/  #访问这个地址可以查看博客</span><br><span class="line"></span><br><span class="line"> git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia  #下载yilia主题到本地</span><br><span class="line"></span><br><span class="line">#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</span><br><span class="line"></span><br><span class="line">hexo c	#清理一下</span><br><span class="line">hexo g	#生成</span><br><span class="line">hexo d	#部署到远程Github仓库</span><br><span class="line">https://YourGithubName.github.io/  #查看博客</span><br><span class="line">转载至b站用户@我是小州啊 的学习笔记</span><br></pre></td></tr></table></figure>
 
 
       
@@ -333,6 +358,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text">介绍如何快速搭建一个简单的个人博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">流程</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -354,17 +392,41 @@
         </div>
       </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2021 杨霖
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
+	<div class="outer">
+	  <div id="footer-info">
+		<div class="footer-left">
+		  &copy; 2021 杨霖
+		</div>
+		<div class="footer-right">
+			<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+				<script>
+					var now = new Date(); 
+					function createtime() { 
+						var grt= new Date("5/27/2021 20:00:00");//此处修改你的建站时间或者网站上线时间 
+						now.setTime(now.getTime()+250); 
+						days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+						hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+						if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+						mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+						seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+						snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+						document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+						document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+					} 
+					setInterval("createtime()",250);
+				</script>
+			<a href="https://yanglinya.github.io/" target="_blank">Ciallo</a>  我的 <a href="https://yanglinya.github.io/" target="_blank">页面</a> by Yang
+		</div>
+	  </div>
+	  <div calss="count-span">
+		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+	  </div>
+	</div>
+  </footer>
+  
+  
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
     </div>
     <script>
 	var yiliaConfig = {
@@ -504,27 +566,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://tding.top/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>小丁的个人博客</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://www.janszeng.top/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>JansZeng</a>
             </li>
           
         </ul>

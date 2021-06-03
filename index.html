@@ -8,6 +8,23 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Ciallo～(∠・ω&lt; )⌒★</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--顶部加载条Start-->
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+    <style>
+    .pace .pace-progress {
+        background: #6d6d6d; /*进度条颜色*/
+        height: 2px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #6d6d6d; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #6d6d6d;    /*上边框颜色*/
+        border-left-color: #6d6d6d;    /*左边框颜色*/
+    }
+  </style>
+  <!--顶部加载条End-->
   <meta name="description" content="萌新一个">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ciallo～(∠・ω&lt; )⌒★">
@@ -87,22 +104,26 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yanglinya" title="github"><i class="icon-github"></i></a>
 		        
+					<a class="mail" target="_blank" href="/2511452948@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
 </div>
-<nav class="header-nav">
+<!-- <nav class="header-nav">
     <div class="social">
         
             <a class="github" target="_blank" href="https://github.com/yanglinya" title="github"><i class="icon-github"></i></a>
         
-    </div>
+            <a class="mail" target="_blank" href="/2511452948@qq.com" title="mail"><i class="icon-mail"></i></a>
+        
+    </div> -->
 
     <!--音乐播放插件-->
-    <div style="margin-top:150px;">
+    <!-- <div style="margin-top:150px;">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=100 src="//music.163.com/outchain/player?type=2&id=536870202&auto=1&height=66"></iframe>
     </div>
-</nav>
+</nav> -->
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -135,6 +156,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/yanglinya" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="mail" target="_blank" href="/2511452948@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -186,81 +209,9 @@
       
         <h1 id="1、继承介绍"><a href="#1、继承介绍" class="headerlink" title="1、继承介绍"></a>1、继承介绍</h1><hr>
 <p>继承就好比一个A和一个B，A中有着一些属性和方法，而B也想要拥有A中的某些属性或方法就要用到继承</p>
-<h2 id="1-1代码演示"><a href="#1-1代码演示" class="headerlink" title="1.1代码演示"></a>1.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//现有两个类Zi类和Fu类，它们有着自己的方法或属性，现在子类想要使用父类中的方法或属性就需要继承</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="comment">//父类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> age = <span class="number">30</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类的show方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">----------------------------------------------------------------------------------------</span><br><span class="line"><span class="comment">//子类想要继承父类的方法可以通过extends关键字</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="comment">//子类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> height = <span class="number">165</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> age = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">zshow</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类的zshow方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show_ha</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> age = <span class="number">20</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;身高：&quot;</span> + height);</span><br><span class="line">        System.out.println(<span class="string">&quot;年龄：&quot;</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">----------------------------------------------------------------------------------------</span><br><span class="line">   <span class="comment">//使用类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//调用两个类中的方法</span></span><br><span class="line">        Fu f = <span class="keyword">new</span> Fu();</span><br><span class="line">        f.show();</span><br><span class="line">        Zi z = <span class="keyword">new</span> Zi();</span><br><span class="line">        z.zshow();</span><br><span class="line">        <span class="comment">//在子类调用父类的方法</span></span><br><span class="line">        z.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    上面会输出Fu类中的show方法中的内容</span></span><br><span class="line"><span class="comment">    Zi类则会输出自己zshow方法中的内容还会在输出Fu类中的show方法中的内容</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//使用继承特性访问Fu类中的变量</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//调用子类的方法查看身高年龄</span></span><br><span class="line">        Zi z = <span class="keyword">new</span> Zi();</span><br><span class="line">        z.show_ha();</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            继承中变量的访问特点</span></span><br><span class="line"><span class="comment">            在子类方法中访问一个变量其查找顺序为</span></span><br><span class="line"><span class="comment">            1- 子类局部范围查找</span></span><br><span class="line"><span class="comment">            2- 子类成员范围查找</span></span><br><span class="line"><span class="comment">            3- 父类成员范围查找</span></span><br><span class="line"><span class="comment">            4- 如果没有就报错(不考虑父亲的父亲...)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="2、super关键字"><a href="#2、super关键字" class="headerlink" title="2、super关键字"></a>2、super关键字</h1><hr>
-<p>依旧是上面的代码，现在提出要求需要访问 ==Zi类==中的成员变量，以及父类中的成员变量</p>
-<h2 id="2-1代码演示"><a href="#2-1代码演示" class="headerlink" title="2.1代码演示"></a>2.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//直接对Zi类进行修改分别使用this关键字和super关键字即可</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="comment">//子类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> height = <span class="number">165</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> age = <span class="number">30</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">zshow</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类的zshow方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show_ha</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> age = <span class="number">20</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;身高：&quot;</span> + height);</span><br><span class="line">        <span class="comment">//访问局部变量的写法</span></span><br><span class="line">        System.out.println(<span class="string">&quot;年龄：&quot;</span> + age);</span><br><span class="line">        <span class="comment">//访问成员变量的写法</span></span><br><span class="line">        System.out.println(<span class="string">&quot;年龄：&quot;</span> + <span class="keyword">this</span>.age);</span><br><span class="line">        <span class="comment">//访问父类变量的写法</span></span><br><span class="line">        System.out.println(<span class="string">&quot;年龄：&quot;</span> + <span class="keyword">super</span>.age);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-2super关键字总结"><a href="#2-2super关键字总结" class="headerlink" title="2.2super关键字总结"></a>2.2super关键字总结</h2><p>==super== 关键字的用法和this关键字的用法相似</p>
-<ul>
-<li>==this==：代表本类对象的引用</li>
-<li>==super==：代表父类存储空间的标识(可以理解为父类对象的引用)</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">关键字</th>
-<th align="center">访问成员变量</th>
-<th align="center">访问构造方法</th>
-<th align="center">访问成员方法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">this</td>
-<td align="center">this.成员变量<br />访问本类成员变量</td>
-<td align="center">this(…)<br />访问本类构造方法</td>
-<td align="center">this.成员方法(…)<br />访问本类成员方法</td>
-</tr>
-<tr>
-<td align="center">super</td>
-<td align="center">super.成员变量<br />访问父类成员变量</td>
-<td align="center">super(…)<br />访问父类构造方法</td>
-<td align="center">super.成员方法(…)<br />访问父类成员方法</td>
-</tr>
-</tbody></table>
-<h1 id="3-继承中构造方法访问特点"><a href="#3-继承中构造方法访问特点" class="headerlink" title="3.继承中构造方法访问特点"></a>3.继承中构造方法访问特点</h1><p>依旧引用顶部的代码</p>
-<hr>
-<h2 id="3-1代码演示"><a href="#3-1代码演示" class="headerlink" title="3.1代码演示"></a>3.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//无参Fu类构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fu</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Fu类无参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//带参Zi类构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fu</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Fu类带参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//无参Zi类构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Zi类无参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//带参Zi类构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Zi类带参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//调用构造方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//分别掉用Zi类和Fu类中的构造方法</span></span><br><span class="line">        Zi z = <span class="keyword">new</span> Zi();</span><br><span class="line">        Zi z_2 = <span class="keyword">new</span> Zi(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//掉用后会这样输出是为什么呢？</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    Fu类无参构造方法</span></span><br><span class="line"><span class="comment">    Zi类无参构造方法</span></span><br><span class="line"><span class="comment">    Fu类无参构造方法</span></span><br><span class="line"><span class="comment">    Zi类带参构造方法</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-1继承构造方法总结"><a href="#3-1继承构造方法总结" class="headerlink" title="3.1继承构造方法总结"></a>3.1继承构造方法总结</h2><p>继承中构造方法的访问特点</p>
-<p>子类中所有的构造方法默认都会访问父类中的无参构造方法，这是为什么呢？</p>
-<ul>
-<li>因为子类会继承父类中的数据，可能还会使用父类的数据。所以，子类初始化之前，一定要先完成父类中的数据初始化</li>
-<li>每一个子类构造方法的第一条语句默认就是super()（只是默认隐藏了而已）</li>
-</ul>
-<p>如果父类中没有无构造构造方法，只有带参构造方法，该怎么办呢？</p>
-<ul>
-<li>通过使用super关键字去显示的调用父类的带参构造方法</li>
-<li>在父类中自己提供一个无参构造方法</li>
-</ul>
-<p>推荐：自己给出无参构造方法</p>
-<h1 id="4-继承中成员方法的调用特点"><a href="#4-继承中成员方法的调用特点" class="headerlink" title="4.继承中成员方法的调用特点"></a>4.继承中成员方法的调用特点</h1><p>依旧引用顶部的代码</p>
-<hr>
-<h2 id="4-1代码演示"><a href="#4-1代码演示" class="headerlink" title="4.1代码演示"></a>4.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Fu类</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类的show方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//Zi类</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类的show方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">zshow</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类的zshow方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//调用方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_5</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//继承中调用成员方法</span></span><br><span class="line">        Zi z = <span class="keyword">new</span> Zi();</span><br><span class="line">        z.zshow();</span><br><span class="line">        z.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//会输出</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	子类的zshow方法</span></span><br><span class="line"><span class="comment">    父类的show方法</span></span><br><span class="line"><span class="comment">    子类的show方法</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-2继承中调用成员方法总结"><a href="#4-2继承中调用成员方法总结" class="headerlink" title="4.2继承中调用成员方法总结"></a>4.2继承中调用成员方法总结</h2><p>继承中成员方法的访问特点</p>
-<p>通过子类对象访问一个方法，其顺序为</p>
-<ul>
-<li>子类成员范围查找</li>
-<li>父类成员范围查找</li>
-<li>如果没有就报错(不考虑父亲的父亲…)</li>
-</ul>
-<h1 id="5-继承中方法的重写"><a href="#5-继承中方法的重写" class="headerlink" title="5.继承中方法的重写"></a>5.继承中方法的重写</h1><hr>
-<h2 id="5-1方法重写概述"><a href="#5-1方法重写概述" class="headerlink" title="5.1方法重写概述"></a>5.1方法重写概述</h2><ul>
-<li>子类中出现和父类中一模一样的方法声明</li>
-</ul>
-<h2 id="5-2方法重写的应用"><a href="#5-2方法重写的应用" class="headerlink" title="5.2方法重写的应用"></a>5.2方法重写的应用</h2><ul>
-<li>当子类需要父类的功能，而功能主体子类有自己持有的内容时，可以重写父类中的方法，这样，既 延续了父类的功能，又定义了子类持有的内容</li>
-<li>练习：手机类和新手机类</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">    <span class="comment">//手机父类</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;给&quot;</span> + name + <span class="string">&quot;打电话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NewPhone</span> <span class="keyword">extends</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">    <span class="comment">//新手机子类</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">//如果下方重写方法在父类中不存在则会显示红色虚线</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;打开视频功能&quot;</span>);</span><br><span class="line">        <span class="keyword">super</span>.call(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_6</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//测试调用手机类</span></span><br><span class="line">        Phone c = <span class="keyword">new</span> Phone();</span><br><span class="line">        c.call(<span class="string">&quot;小明&quot;</span>);</span><br><span class="line">        NewPhone c_2 = <span class="keyword">new</span> NewPhone();</span><br><span class="line">        c_2.call(<span class="string">&quot;小红&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	给小明打电话</span></span><br><span class="line"><span class="comment">	打开视频功能</span></span><br><span class="line"><span class="comment">	给小红打电话</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="ps：上面用到的-Override"><a href="#ps：上面用到的-Override" class="headerlink" title="ps：上面用到的@Override"></a>ps：上面用到的@Override</h3><ul>
-<li>是什么：是一个注解(后面会详细说到)</li>
-<li>可以干嘛：可以帮助检查重写方法的方法声明的正确性</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2021/06/02/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%BB%A7%E6%89%BF/#more">more >></a>
+        
       
 
       
@@ -348,9 +299,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">node -v #查看node版本</span><br><span class="line">npm -v #查看npm版本</span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	#安装淘宝的cnpm 管理器</span><br><span class="line">cnpm -v	#查看cnpm版本</span><br><span class="line">cnpm install -g hexo-cli    #安装hexo框架</span><br><span class="line">hexo -v	#查看hexo版本</span><br><span class="line">mkdir blog	#创建blog目录</span><br><span class="line">cd blog	 #进入blog目录</span><br><span class="line">sudo hexo init 	#生成博客 初始化博客</span><br><span class="line">hexo s	#启动本地博客服务</span><br><span class="line">http://localhost:4000/	#本地访问地址</span><br><span class="line">hexo n 我的第一篇文章 #创建新的文章 </span><br><span class="line">#返回blog目录</span><br><span class="line">hexo clean #清理</span><br><span class="line">hexo g #生成</span><br><span class="line">#Github创建一个新的仓库 YourGithubName.github.io</span><br><span class="line">cnpm install --save hexo-deployer-git #在blog目录下安装git部署插件</span><br><span class="line">----</span><br><span class="line">#配置_config.yml </span><br><span class="line">-----</span><br><span class="line">	# Deployment</span><br><span class="line">	## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">	deploy:</span><br><span class="line">  		type: git</span><br><span class="line"> 		repo: https://github.com/YourGithubName/YourGithubName.github.io.git</span><br><span class="line">  		branch: master</span><br><span class="line">-----</span><br><span class="line">hexo d	#部署到Github仓库里</span><br><span class="line">https://YourGithubName.github.io/  #访问这个地址可以查看博客</span><br><span class="line"></span><br><span class="line"> git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia  #下载yilia主题到本地</span><br><span class="line"></span><br><span class="line">#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</span><br><span class="line"></span><br><span class="line">hexo c	#清理一下</span><br><span class="line">hexo g	#生成</span><br><span class="line">hexo d	#部署到远程Github仓库</span><br><span class="line">https://YourGithubName.github.io/  #查看博客</span><br><span class="line">转载至b站用户@我是小州啊 的学习笔记</span><br></pre></td></tr></table></figure>
-
-
+        <h1 id="介绍如何快速搭建一个简单的个人博客"><a href="#介绍如何快速搭建一个简单的个人博客" class="headerlink" title="介绍如何快速搭建一个简单的个人博客"></a>介绍如何快速搭建一个简单的个人博客</h1>
+        
+          <a class="article-more-a" href="/2021/05/28/Hexo+Next%E8%AE%BE%E7%BD%AE/#more">more >></a>
+        
       
 
       
@@ -425,17 +377,41 @@
         </div>
       </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2021 杨霖
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
+	<div class="outer">
+	  <div id="footer-info">
+		<div class="footer-left">
+		  &copy; 2021 杨霖
+		</div>
+		<div class="footer-right">
+			<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+				<script>
+					var now = new Date(); 
+					function createtime() { 
+						var grt= new Date("5/27/2021 20:00:00");//此处修改你的建站时间或者网站上线时间 
+						now.setTime(now.getTime()+250); 
+						days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+						hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+						if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+						mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+						seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+						snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+						document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+						document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+					} 
+					setInterval("createtime()",250);
+				</script>
+			<a href="https://yanglinya.github.io/" target="_blank">Ciallo</a>  我的 <a href="https://yanglinya.github.io/" target="_blank">页面</a> by Yang
+		</div>
+	  </div>
+	  <div calss="count-span">
+		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+	  </div>
+	</div>
+  </footer>
+  
+  
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
     </div>
     <script>
 	var yiliaConfig = {
@@ -575,27 +551,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://tding.top/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>小丁的个人博客</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://www.janszeng.top/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>JansZeng</a>
             </li>
           
         </ul>
