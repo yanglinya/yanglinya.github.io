@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | Ciallo～(∠・ω&lt; )⌒★</title>
+  <title>Java学习之修饰符 | Ciallo～(∠・ω&lt; )⌒★</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--顶部加载条Start-->
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,14 +25,18 @@
     }
   </style>
   <!--顶部加载条End-->
-  <meta name="description" content="萌新一个">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ciallo～(∠・ω&lt; )⌒★">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="Java中修饰符的使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习之修饰符">
+<meta property="og:url" content="http://example.com/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BF%AE%E9%A5%B0%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒★">
-<meta property="og:description" content="萌新一个">
+<meta property="og:description" content="Java中修饰符的使用">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-04T06:42:41.000Z">
+<meta property="article:modified_time" content="2021-06-04T07:16:44.797Z">
 <meta property="article:author" content="杨霖">
+<meta property="article:tag" content="java学习">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Ciallo～(∠・ω&lt; )⌒★" type="application/atom+xml">
@@ -191,36 +195,113 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java学习之修饰符" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java学习之修饰符
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="archive-article-date">
+
+        
+        <a href="/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="archive-article-date">
   	<time datetime="2021-06-04T06:42:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BF%AE%E9%A5%B0%E7%AC%A6/">Java学习之修饰符</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--标签Start-->
+      
+      
+      
+      <!--标签End-->
+      
+        <p>Java中修饰符的使用</p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h1 id="1-Java权限修饰符"><a href="#1-Java权限修饰符" class="headerlink" title="1.Java权限修饰符"></a>1.Java权限修饰符</h1><hr>
+<h2 id="1-2Java-Modifier包下的Fu类"><a href="#1-2Java-Modifier包下的Fu类" class="headerlink" title="1.2Java_Modifier包下的Fu类"></a>1.2Java_Modifier包下的Fu类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_Modifier;</span><br><span class="line"><span class="comment">//父类</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">show1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;private修饰&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;默认修饰&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">show3</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;protected修饰&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show4</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;public修饰&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Fu f = <span class="keyword">new</span> Fu();</span><br><span class="line">        f.show1();</span><br><span class="line">        f.show2();</span><br><span class="line">        f.show3();</span><br><span class="line">        f.show4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3Java-Modifier包下的Test-Demo类"><a href="#1-3Java-Modifier包下的Test-Demo类" class="headerlink" title="1.3Java_Modifier包下的Test_Demo类"></a>1.3Java_Modifier包下的Test_Demo类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_Modifier;</span><br><span class="line"><span class="comment">//同包下并继承测试</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_Demo</span> <span class="keyword">extends</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Fu f = <span class="keyword">new</span> Fu();</span><br><span class="line">        f.show2();</span><br><span class="line">        f.show3();</span><br><span class="line">        f.show4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4Java-Modifier包下的Test-Demo2类"><a href="#1-4Java-Modifier包下的Test-Demo2类" class="headerlink" title="1.4Java_Modifier包下的Test_Demo2类"></a>1.4Java_Modifier包下的Test_Demo2类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_Modifier;</span><br><span class="line"><span class="comment">//同包但没有关系下测试</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_Demo2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Fu f = <span class="keyword">new</span> Fu();</span><br><span class="line">        f.show2();</span><br><span class="line">        f.show3();</span><br><span class="line">        f.show4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5Java-Modifier2包下的Test-Demo类"><a href="#1-5Java-Modifier2包下的Test-Demo类" class="headerlink" title="1.5Java_Modifier2包下的Test_Demo类"></a>1.5Java_Modifier2包下的Test_Demo类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_Modifier2;</span><br><span class="line"><span class="keyword">import</span> Java_Modifier.Fu;</span><br><span class="line"><span class="comment">//不同包导包下测试</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Fu f = <span class="keyword">new</span> Fu();</span><br><span class="line">        f.show4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-6Java-Modifier2包下的Test-Demo2类"><a href="#1-6Java-Modifier2包下的Test-Demo2类" class="headerlink" title="1.6Java_Modifier2包下的Test_Demo2类"></a>1.6Java_Modifier2包下的Test_Demo2类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_Modifier2;</span><br><span class="line"><span class="keyword">import</span> Java_Modifier.Fu;</span><br><span class="line"><span class="comment">//不同包导包并继承测试</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_Demo2</span> <span class="keyword">extends</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Fu f = <span class="keyword">new</span> Fu();</span><br><span class="line">        f.show4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-总结表格-在黑马老师的基础上有所修改"><a href="#2-总结表格-在黑马老师的基础上有所修改" class="headerlink" title="2.总结表格(在黑马老师的基础上有所修改)"></a>2.总结表格(在黑马老师的基础上有所修改)</h1><table>
+<thead>
+<tr>
+<th align="center">修饰符</th>
+<th align="center">同一类中</th>
+<th align="center">同一个包中<br>子类无关类</th>
+<th align="center">不同包的子类</th>
+<th align="center">不同包的无关类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">private</td>
+<td align="center">&radic;</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">默认</td>
+<td align="center">&radic;</td>
+<td align="center">&radic;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">protected</td>
+<td align="center">&radic;</td>
+<td align="center">&radic;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">public</td>
+<td align="center">&radic;</td>
+<td align="center">&radic;</td>
+<td align="center">&radic;</td>
+<td align="center">&radic;</td>
+</tr>
+</tbody></table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -236,7 +317,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -249,176 +330,118 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BF%AE%E9%A5%B0%E7%AC%A6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2021-06-04T06:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java学习之包</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%8C%85/">Java学习之包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Java%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.</span> <span class="toc-text">1.Java权限修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2Java-Modifier%E5%8C%85%E4%B8%8B%E7%9A%84Fu%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">1.2Java_Modifier包下的Fu类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3Java-Modifier%E5%8C%85%E4%B8%8B%E7%9A%84Test-Demo%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">1.3Java_Modifier包下的Test_Demo类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4Java-Modifier%E5%8C%85%E4%B8%8B%E7%9A%84Test-Demo2%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">1.4Java_Modifier包下的Test_Demo2类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5Java-Modifier2%E5%8C%85%E4%B8%8B%E7%9A%84Test-Demo%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">1.5Java_Modifier2包下的Test_Demo类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6Java-Modifier2%E5%8C%85%E4%B8%8B%E7%9A%84Test-Demo2%E7%B1%BB"><span class="toc-number">1.5.</span> <span class="toc-text">1.6Java_Modifier2包下的Test_Demo2类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%80%BB%E7%BB%93%E8%A1%A8%E6%A0%BC-%E5%9C%A8%E9%BB%91%E9%A9%AC%E8%80%81%E5%B8%88%E7%9A%84%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%9C%89%E6%89%80%E4%BF%AE%E6%94%B9"><span class="toc-number">2.</span> <span class="toc-text">2.总结表格(在黑马老师的基础上有所修改)</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/02/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2021-06-02T07:48:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/02/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%BB%A7%E6%89%BF/">Java学习之继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/28/Hexo+Next%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-05-28T07:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-28</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/28/Hexo+Next%E8%AE%BE%E7%BD%AE/">Hexo+Next简单设置教程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转载</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+
 
 
           </div>
@@ -465,8 +488,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
