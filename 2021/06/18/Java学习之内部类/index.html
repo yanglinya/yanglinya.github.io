@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>标签 | Ciallo～(∠・ω&lt; )⌒★</title>
+  <title>Java学习之内部类 | Ciallo～(∠・ω&lt; )⌒★</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--顶部加载条Start-->
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,16 +25,18 @@
     }
   </style>
   <!--顶部加载条End-->
-  <meta name="description" content="萌新一个">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  <meta name="description" content="内部类即类里面的类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习之内部类">
+<meta property="og:url" content="http://example.com/2021/06/18/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%86%85%E9%83%A8%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒★">
-<meta property="og:description" content="萌新一个">
+<meta property="og:description" content="内部类即类里面的类">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-28T07:13:22.000Z">
-<meta property="article:modified_time" content="2021-06-03T06:27:05.793Z">
+<meta property="article:published_time" content="2021-06-18T08:35:51.000Z">
+<meta property="article:modified_time" content="2021-06-18T10:06:38.179Z">
 <meta property="article:author" content="杨霖">
+<meta property="article:tag" content="java学习">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Ciallo～(∠・ω&lt; )⌒★" type="application/atom+xml">
@@ -193,64 +195,72 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="tags-" class="article article-type-tags " itemscope itemprop="blogPost">
+            <article id="post-Java学习之内部类" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      标签
+      Java学习之内部类
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2021-05-28T07:13:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-28</time>
+        <a href="/2021/06/18/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%86%85%E9%83%A8%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2021-06-18T08:35:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       <!--标签Start-->
-        
-        <!-- 这里也可用type去判断，放在tags标签页 -->
-          <hr>        
-          <div class="tags">
-              <a href="/tags/java%E5%AD%A6%E4%B9%A0/" style="font-size: 35px; color: #808080">java学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 35px; color: #808080">学习笔记</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 16px; color: #00f">技术</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 16px; color: #00f">转载</a>
-          </div>
-          
-          <!-- 这里也可以放进css文件中，这样阅读性好些 -->
-          <style>
-             
-              .article-entry ul li:before{
-                  display: none;
-              }
-              
-              .tags {
-                  max-width: 40em;
-                  margin: 2em auto;
-                  margin-top: 0em;
-              }
-              .tags a {
-                  margin-right: 1em;
-                  border-bottom: 1px solid blue;
-                  line-height: 65px;
-                  white-space: nowrap;
-              }
-              .tags a:hover {
-                  border-bottom: 2px solid green;
-                  font-style: italic;
-                  color: #22323a;
-                  text-decoration: none;
-              }
-          </style>
       
       
       
       <!--标签End-->
       
-        
+        <p> 内部类即类里面的类</p>
+<span id="more"></span>
+
+<h1 id="1-代码演示"><a href="#1-代码演示" class="headerlink" title="1.代码演示"></a>1.代码演示</h1><hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_InternalClass;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Inner n = <span class="keyword">new</span> Inner();</span><br><span class="line">        n.show();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2内部类成员访问特点"><a href="#1-2内部类成员访问特点" class="headerlink" title="1.2内部类成员访问特点"></a>1.2内部类成员访问特点</h2><ul>
+<li>内部类可以直接访问外部类中的成员，包括私有</li>
+<li>外部类访问内部类的成员方法，必须创建对象</li>
+</ul>
+<h1 id="2-成员内部类"><a href="#2-成员内部类" class="headerlink" title="2.成员内部类"></a>2.成员内部类</h1><hr>
+<h2 id="2-1代码演示"><a href="#2-1代码演示" class="headerlink" title="2.1代码演示"></a>2.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_InternalClass2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line"><span class="comment">//    public class Inner&#123;</span></span><br><span class="line"><span class="comment">//        public void show()&#123;</span></span><br><span class="line"><span class="comment">//            System.out.println(num);</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//这样更好</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Inner d = <span class="keyword">new</span> Inner();</span><br><span class="line">        d.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试类中访问内部类中的方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//Outer.Inner n = new Outer().new Inner();</span></span><br><span class="line">        <span class="comment">//n.show(); //当内部成员使用private修饰时将无法访问</span></span><br><span class="line"></span><br><span class="line">        Outer n = <span class="keyword">new</span> Outer();</span><br><span class="line">        n.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出内容</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-局部内部类"><a href="#3-局部内部类" class="headerlink" title="3.局部内部类"></a>3.局部内部类</h1><hr>
+<h2 id="3-1代码演示"><a href="#3-1代码演示" class="headerlink" title="3.1代码演示"></a>3.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_InternalClass3;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num_1 = <span class="number">666</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">int</span> num_2 = <span class="number">999</span>;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">                System.out.println(num_1);</span><br><span class="line">                System.out.println(num_2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Inner n = <span class="keyword">new</span> Inner();</span><br><span class="line">        n.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Outer n = <span class="keyword">new</span> Outer();</span><br><span class="line">        n.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	666</span></span><br><span class="line"><span class="comment">	999</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2总结"><a href="#3-2总结" class="headerlink" title="3.2总结"></a>3.2总结</h2><ul>
+<li>局部内部类是在方法中定义的类，所以外界是无法直接使用，需要在方法内部创建对象并使用</li>
+<li>该类可以直接访问外部类的成员，也可以访问方法内的局部变量</li>
+</ul>
+<h1 id="4-匿名内部类"><a href="#4-匿名内部类" class="headerlink" title="4.匿名内部类"></a>4.匿名内部类</h1><hr>
+<h2 id="4-1介绍"><a href="#4-1介绍" class="headerlink" title="4.1介绍"></a>4.1介绍</h2><ul>
+<li><p>前提：存在一个类或者接口，这里的类可以是具体类也可以是抽象类</p>
+</li>
+<li><p>格式：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 类名或者接口名()&#123;</span><br><span class="line">    重写方法;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>范例：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Inter()&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>本质：是一个继承了该类或者实现了该接口的子类匿名对象</p>
+<h2 id="4-2代码演示"><a href="#4-2代码演示" class="headerlink" title="4.2代码演示"></a>4.2代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_InternalClass4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"><span class="comment">//    public void method () &#123;</span></span><br><span class="line"><span class="comment">//        new Inter() &#123;</span></span><br><span class="line"><span class="comment">//            @Override</span></span><br><span class="line"><span class="comment">//            public void show() &#123;</span></span><br><span class="line"><span class="comment">//                System.out.println(&quot;匿名内部类&quot;);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//        &#125;.show();</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//想要多次调用可以这样写</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">        Inter i = <span class="keyword">new</span> Inter() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;匿名内部类&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        i.show();</span><br><span class="line">        i.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Inter</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Outer a = <span class="keyword">new</span> Outer();</span><br><span class="line">        a.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出内容</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	匿名内部类</span></span><br><span class="line"><span class="comment">	匿名内部类</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-匿名内部类在开发中的使用"><a href="#5-匿名内部类在开发中的使用" class="headerlink" title="5.匿名内部类在开发中的使用"></a>5.匿名内部类在开发中的使用</h1><hr>
+<h2 id="5-1代码演示"><a href="#5-1代码演示" class="headerlink" title="5.1代码演示"></a>5.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_InternalClass5;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TypeC</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">type_c</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ComputerOperator</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">userType_c</span><span class="params">(TypeC c)</span></span>&#123;</span><br><span class="line">        c.type_c();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TypeC <span class="title">setType_c</span><span class="params">()</span></span>&#123;</span><br><span class="line">        TypeC a = <span class="keyword">new</span> Pc_1();</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pc_1</span> <span class="keyword">implements</span> <span class="title">TypeC</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">type_c</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;电脑1有typec接口&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">//这样每次都要创建类文件麻烦，直接使用匿名内部类即可</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo_1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ComputerOperator pc_1 = <span class="keyword">new</span> ComputerOperator();</span><br><span class="line">        TypeC a = <span class="keyword">new</span> Pc_1();</span><br><span class="line">        pc_1.userType_c(a);</span><br><span class="line"></span><br><span class="line">        pc_1.userType_c(<span class="keyword">new</span> TypeC() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">type_c</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;电脑2有typec接口&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        pc_1.userType_c(<span class="keyword">new</span> TypeC() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">type_c</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;电脑3有typec接口&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	电脑1有typec接口	</span></span><br><span class="line"><span class="comment">	电脑2有typec接口</span></span><br><span class="line"><span class="comment">	电脑3有typec接口</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -279,7 +289,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -329,7 +365,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/18/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%86%85%E9%83%A8%E7%B1%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -341,6 +377,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/11/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java学习之接口</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -362,7 +408,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">1.代码演示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E5%86%85%E9%83%A8%E7%B1%BB%E6%88%90%E5%91%98%E8%AE%BF%E9%97%AE%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">1.2内部类成员访问特点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%88%90%E5%91%98%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">2.成员内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">2.1.</span> <span class="toc-text">2.1代码演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">3.局部内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">3.1.</span> <span class="toc-text">3.1代码演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2%E6%80%BB%E7%BB%93"><span class="toc-number">3.2.</span> <span class="toc-text">3.2总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">4.匿名内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.1.</span> <span class="toc-text">4.1介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">4.2.</span> <span class="toc-text">4.2代码演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">5.匿名内部类在开发中的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">5.1.</span> <span class="toc-text">5.1代码演示</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -371,6 +417,17 @@
     </div>
 </aside>
 
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
 
@@ -418,7 +475,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
