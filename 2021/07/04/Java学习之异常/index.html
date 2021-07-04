@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>分类 | Ciallo～(∠・ω&lt; )⌒★</title>
+  <title>Java学习之异常 | Ciallo～(∠・ω&lt; )⌒★</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--顶部加载条Start-->
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,17 +25,21 @@
     }
   </style>
   <!--顶部加载条End-->
-  <meta name="description" content="萌新一个">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="Java异常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习之异常">
+<meta property="og:url" content="http://example.com/2021/07/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="Ciallo～(∠・ω&lt; )⌒★">
-<meta property="og:description" content="萌新一个">
+<meta property="og:description" content="Java异常">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-28T07:13:36.000Z">
-<meta property="article:modified_time" content="2021-06-03T06:26:38.192Z">
+<meta property="og:image" content="http://example.com/2021/07/04/img/异常体系.png">
+<meta property="article:published_time" content="2021-07-04T08:23:10.000Z">
+<meta property="article:modified_time" content="2021-07-04T10:06:55.469Z">
 <meta property="article:author" content="杨霖">
+<meta property="article:tag" content="java学习">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/07/04/img/异常体系.png">
   
     <link rel="alternative" href="/atom.xml" title="Ciallo～(∠・ω&lt; )⌒★" type="application/atom+xml">
   
@@ -193,20 +197,299 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article class="article article-type-post show">
-    <header class="article-header" style="border-bottom: 1px solid #ccc">
-    <h1 class="article-title" itemprop="name">
-      分类
-    </h1>
-    </header>
+            <article id="post-Java学习之异常" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java学习之异常
+    </h1>
+  
+
+        
+        <a href="/2021/07/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BC%82%E5%B8%B8/" class="archive-article-date">
+  	<time datetime="2021-07-04T08:23:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-04</time>
+</a>
+        
+      </header>
     
-    <div class="category-all-page">
-      <h2>共计&nbsp;2&nbsp;个分类</h2>
-      <ul class="category-list-item-list"><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-item-list-count">10</span></li><li class="category-list-item-list-item"><a class="category-list-item-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-item-list-count">1</span></li></ul>
+    <div class="article-entry" itemprop="articleBody">
+      <!--标签Start-->
+      
+      
+      
+      <!--标签End-->
+      
+        <p> Java异常</p>
+<span id="more"></span>
+
+<h1 id="1-异常介绍"><a href="#1-异常介绍" class="headerlink" title="1.异常介绍"></a>1.异常介绍</h1><p>异常 ：就是程序出现了不正常的情况</p>
+<p>异常体系</p>
+<img src="..\img\异常体系.png" alt="异常体系" style="zoom:67%;" />
+
+<p>Error：严重问题，不需要处理</p>
+<p>Exception：称为异常类，它表示程序本身可以处理的问题</p>
+<ul>
+<li>RuntimeException：在编译期是不检查的，出现问题后，需要我们回来修改代码</li>
+<li>非RuntimeException：编译期就必须处理的，否则程序不能通过编译，就更不能正常运行了</li>
+</ul>
+<h1 id="2-JVM的默认处理方案"><a href="#2-JVM的默认处理方案" class="headerlink" title="2.JVM的默认处理方案"></a>2.JVM的默认处理方案</h1><p>如果程序出现了问题，我们没有做任何处理，最终JVM会做默认的处理</p>
+<ul>
+<li>把异常的名称，异常原因及异常出现的位置等信息输出在了控制台</li>
+<li>程序停止执行</li>
+</ul>
+<h1 id="3-异常处理之try…catch…"><a href="#3-异常处理之try…catch…" class="headerlink" title="3.异常处理之try…catch…"></a>3.异常处理之try…catch…</h1><ul>
+<li>格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    可能出现异常的代码;</span><br><span class="line">&#125; <span class="keyword">catch</span>(异常类名 变量名) &#123;</span><br><span class="line">    异常的处理代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行流程：</p>
+<p>程序从try里面的代码开始执行</p>
+<p>出现异常，会自动生成一个异常类对象，该异常对象将被提交给Java运行时系统</p>
+<p>当Java运行时系统接收到异常对象时，就会到catch中去找匹配的异常类，找到后进行异常的处理</p>
+<p>执行完毕之后，程序还可以继续往下执行</p>
+<h2 id="3-1代码演示"><a href="#3-1代码演示" class="headerlink" title="3.1代码演示"></a>3.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_异常;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Java_JVM</span>处理方案 </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;开始&quot;</span>);</span><br><span class="line">        result();</span><br><span class="line">        System.out.println(<span class="string">&quot;结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">result</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">            System.out.println(arr[<span class="number">3</span>]);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ArrayIndexOutOfBoundsException error)&#123;</span><br><span class="line"><span class="comment">//            System.out.println(&quot;存在问题请检查&quot;);</span></span><br><span class="line">            error.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	开始</span></span><br><span class="line"><span class="comment">	结束</span></span><br><span class="line"><span class="comment">	java.lang.ArrayIndexOutOfBoundsException: 3</span></span><br><span class="line"><span class="comment">		at Java_异常.Java_JVM处理方案.result(Java_JVM处理方案.java:13)</span></span><br><span class="line"><span class="comment">		at Java_异常.Java_JVM处理方案.main(Java_JVM处理方案.java:6)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="4-Throwable的成员方法"><a href="#4-Throwable的成员方法" class="headerlink" title="4.Throwable的成员方法"></a>4.Throwable的成员方法</h1><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public String getMessage()</td>
+<td>返回throwable的详细消息字符串</td>
+</tr>
+<tr>
+<td>public String toString()</td>
+<td>返回此可抛出的简短描述</td>
+</tr>
+<tr>
+<td>public void printStackTrace()</td>
+<td>把异常的错误信息输出在控制台</td>
+</tr>
+</tbody></table>
+<h2 id="4-1代码演示"><a href="#4-1代码演示" class="headerlink" title="4.1代码演示"></a>4.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_异常;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Java_Throwable</span>类 </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;开始&quot;</span>);</span><br><span class="line">        result();</span><br><span class="line">        System.out.println(<span class="string">&quot;结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">result</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">            System.out.println(arr[<span class="number">3</span>]);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ArrayIndexOutOfBoundsException error)&#123;</span><br><span class="line"><span class="comment">//            System.out.println(&quot;存在问题请检查&quot;);</span></span><br><span class="line"><span class="comment">//            System.out.println(error.getMessage());</span></span><br><span class="line"><span class="comment">//            System.out.println(error.toString());</span></span><br><span class="line">            error.printStackTrace(); <span class="comment">//输出内容最全推荐</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//getMessage()输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	3</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//toString()输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	java.lang.ArrayIndexOutOfBoundsException: 3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-编译时异常和运行时异常的区别"><a href="#5-编译时异常和运行时异常的区别" class="headerlink" title="5.编译时异常和运行时异常的区别"></a>5.编译时异常和运行时异常的区别</h1><p>Java中的异常被分为两大类：编译时异常和运行时异常，也被称为受检异常和非受检异常</p>
+<p>所有的RuntimeException类及其子类被称为运行时异常，其他异常都是编译时异常</p>
+<ul>
+<li>编译时异常：无须显示处理，否则程序就会发生错误，无法通过编译</li>
+<li>运行时异常：无需显示处理，也可以和编译时异常一样处理</li>
+</ul>
+<h2 id="5-1代码演示"><a href="#5-1代码演示" class="headerlink" title="5.1代码演示"></a>5.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_异常;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Java_</span>异常3 </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        method();</span><br><span class="line">        method_2();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//编译时异常</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method_2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String str = <span class="string">&quot;2021-07-04&quot;</span>;</span><br><span class="line">            SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat();</span><br><span class="line">            Date d_1 = sdf.parse(str);</span><br><span class="line">            System.out.println(d_1);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (ParseException error)&#123;</span><br><span class="line">            error.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//运行时异常</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">            System.out.println(arr[<span class="number">3</span>]);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ArrayIndexOutOfBoundsException error)&#123;</span><br><span class="line">            error.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">java.lang.ArrayIndexOutOfBoundsException: 3</span></span><br><span class="line"><span class="comment">	at Java_异常.Java_异常3.method(Java_异常3.java:27)</span></span><br><span class="line"><span class="comment">	at Java_异常.Java_异常3.main(Java_异常3.java:9)</span></span><br><span class="line"><span class="comment">java.text.ParseException: Unparseable date: &quot;2021-07-04&quot;</span></span><br><span class="line"><span class="comment">	at java.text.DateFormat.parse(DateFormat.java:366)</span></span><br><span class="line"><span class="comment">	at Java_异常.Java_异常3.method_2(Java_异常3.java:17)</span></span><br><span class="line"><span class="comment">	at Java_异常.Java_异常3.main(Java_异常3.java:10)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="6-异常处理之throws"><a href="#6-异常处理之throws" class="headerlink" title="6.异常处理之throws"></a>6.异常处理之throws</h1><p>虽然我们通过try…catch…可以对异常进行处理，但是并不是所有的情况我们都有权限进行异常的处理</p>
+<p>也就是说，有些时候可能出现的异常是我们处理不了的，这个时候该怎么办呢？</p>
+<p>针对这种情况，Java提供了throws的处理方案</p>
+<p>格式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">throws</span> 异常类名;</span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red">注意</span>：这个格式是跟在方法的括号后面的</p>
+<ul>
+<li>编译时异常必须要进行处理，两种处理方案：try…catch…或者throws如果采用throws这种方案，将来谁调用谁处理</li>
+<li>运行时异常可以不处理，出现问题后，需要我们回来修改代码</li>
+</ul>
+<h2 id="6-1代码演示"><a href="#6-1代码演示" class="headerlink" title="6.1代码演示"></a>6.1代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_异常;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Java_</span>异常4 </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;开始&quot;</span>);</span><br><span class="line"><span class="comment">//        method();</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            method_2();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//运行时异常</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> <span class="keyword">throws</span> ArrayIndexOutOfBoundsException</span>&#123;</span><br><span class="line">            <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">            System.out.println(arr[<span class="number">3</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//编译时异常</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method_2</span><span class="params">()</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line"></span><br><span class="line">        String str = <span class="string">&quot;2021-07-04&quot;</span>;</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat();</span><br><span class="line">        Date d_1 = sdf.parse(str);</span><br><span class="line">        System.out.println(d_1);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	开始</span></span><br><span class="line"><span class="comment">    java.text.ParseException: Unparseable date: &quot;2021-07-04&quot;</span></span><br><span class="line"><span class="comment">        at java.text.DateFormat.parse(DateFormat.java:366)</span></span><br><span class="line"><span class="comment">        at Java_异常.Java_异常4.method_2(Java_异常4.java:30)</span></span><br><span class="line"><span class="comment">        at Java_异常.Java_异常4.main(Java_异常4.java:12)</span></span><br><span class="line"><span class="comment">	结束</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="7-自定义异常"><a href="#7-自定义异常" class="headerlink" title="7.自定义异常"></a>7.自定义异常</h1><h2 id="7-1定义格式"><a href="#7-1定义格式" class="headerlink" title="7.1定义格式"></a>7.1定义格式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//格式：</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 异常类名 <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123;</span><br><span class="line">    无参构造</span><br><span class="line">    带参构造</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//范例：</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SocreException</span> <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SocreException</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SocreException</span> <span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-2代码演示"><a href="#7-2代码演示" class="headerlink" title="7.2代码演示"></a>7.2代码演示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Java_异常<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScoreException</span> <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123;</span><br><span class="line">    ScoreException ()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ScoreException(String message)&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Teacher</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Check</span><span class="params">(<span class="keyword">int</span> score)</span> <span class="keyword">throws</span> ScoreException </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (score &lt; <span class="number">0</span> || score &gt; <span class="number">100</span>)&#123;</span><br><span class="line"><span class="comment">//            throw new ScoreException();</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ScoreException(<span class="string">&quot;分数应在1-100之间&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Score OK!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Teacher_Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.print(<span class="string">&quot;输入分数：&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> score = sc.nextInt();</span><br><span class="line">        Teacher teacher = <span class="keyword">new</span> Teacher();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            teacher.Check(score);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ScoreException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	输入分数：-1</span></span><br><span class="line"><span class="comment">    Java_异常2.ScoreException: 分数应在1-100之间</span></span><br><span class="line"><span class="comment">        at Java_异常2.Teacher.Check(Teacher.java:7)</span></span><br><span class="line"><span class="comment">        at Java_异常2.Teacher_Test.main(Teacher_Test.java:12)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-3throws和throw的区别"><a href="#7-3throws和throw的区别" class="headerlink" title="7.3throws和throw的区别"></a>7.3throws和throw的区别</h2><table>
+<thead>
+<tr>
+<th>throws</th>
+<th>throw</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用在方法声明后面，跟的是异常类名</td>
+<td>在方法体内，跟的是异常对象名</td>
+</tr>
+<tr>
+<td>表示抛出异常，由该方法的调用者来处理</td>
+<td>表示抛出异常，由方法体内的语句处理</td>
+</tr>
+<tr>
+<td>表示出现异常的一种可能性，并不一定会发生这些异常</td>
+<td>执行throw一定抛出了某种异常</td>
+</tr>
+</tbody></table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
-    
-  </article>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/04/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BC%82%E5%B8%B8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/23/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AE%80%E5%8D%95%E6%A1%88%E4%BE%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java学习之简单案例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%BC%82%E5%B8%B8%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">1.异常介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-JVM%E7%9A%84%E9%BB%98%E8%AE%A4%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">2.JVM的默认处理方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E4%B9%8Btry%E2%80%A6catch%E2%80%A6"><span class="toc-number">3.</span> <span class="toc-text">3.异常处理之try…catch…</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">3.1.</span> <span class="toc-text">3.1代码演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Throwable%E7%9A%84%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">4.Throwable的成员方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">4.1.</span> <span class="toc-text">4.1代码演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E7%BC%96%E8%AF%91%E6%97%B6%E5%BC%82%E5%B8%B8%E5%92%8C%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">5.</span> <span class="toc-text">5.编译时异常和运行时异常的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">5.1.</span> <span class="toc-text">5.1代码演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E4%B9%8Bthrows"><span class="toc-number">6.</span> <span class="toc-text">6.异常处理之throws</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">6.1.</span> <span class="toc-text">6.1代码演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-number">7.</span> <span class="toc-text">7.自定义异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="toc-number">7.1.</span> <span class="toc-text">7.1定义格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA"><span class="toc-number">7.2.</span> <span class="toc-text">7.2代码演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3throws%E5%92%8Cthrow%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">7.3.</span> <span class="toc-text">7.3throws和throw的区别</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+
           </div>
         </div>
       </div>
@@ -251,7 +534,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
